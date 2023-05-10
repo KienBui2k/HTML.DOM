@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quản lý sản phẩm</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Danh sách sản phẩm</h2>
+    <h4>cho anh oder một con hàng chiến nhất barclub này </h4>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên sản phẩm</th>
+                <th>Xoá sản phẩm</th>
+            </tr>
+        </thead>
+        <tbody id="product-list">
+        </tbody>
+    </table>
+    <h2>Thêm sản phẩm mới</h2>
+    <form>
+        <label for="product-name">Tên sản phẩm:</label>
+        <input type="text" id="product-name" name="product-name">
+        <button type="button" onclick="addProduct()">Thêm</button>
+    </form>
+    <h2>Sửa tên sản phẩm</h2>
+    <form>
+        <label for="product-id">Chọn sản phẩm:</label>
+        <select id="product-id" name="product-id" onchange="showProduct()">
+            <option value="">Chọn sản phẩm</option>
+            <!-- Thêm các tùy chọn cho từng sản phẩm -->
+            <option value="0">Sản phẩm 1</option>
+            <option value="1">Sản phẩm 2</option>
+            <option value="2">Sản phẩm 3</option>
+            <!-- ... -->
+        </select>
+
+        <label for="new-product-name">Tên sản phẩm mới:</label>
+        <input type="text" id="new-product-name" name="new-product-name">
+        <button type="button" onclick="editProduct()">Sửa</button>
+    </form>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
